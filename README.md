@@ -36,17 +36,54 @@ references/
   registers.md            all nine register profiles (diction, moves, sample openings)
   human-prose.md          the positive craft: specificity, rhythm, restraint
   self-check.md           a 20-second pass to run before you deliver
+scripts/
+  voz_sessionstart.py     the lightweight reminder the always-on hook prints
+  wire_settings.py        idempotent always-on wiring (CLAUDE.md + settings.json)
+install.ps1               one-command installer (Windows)
+install.sh                one-command installer (macOS/Linux)
 ```
 
 ## Install
 
-Clone into your Claude Code skills directory:
+### Quick install
 
+Clone the repo and run the installer. It copies the skill into `~/.claude/skills/voz`, which both the Claude Code CLI and the VSCode extension read.
+
+Windows (PowerShell):
+```powershell
+git clone https://github.com/ojesusmp/voz.git
+./voz/install.ps1
+```
+
+macOS/Linux (bash):
+```bash
+git clone https://github.com/ojesusmp/voz.git
+bash voz/install.sh
+```
+
+### Always-on (optional)
+
+A plain install just adds the skill, so you invoke it when you want it. To make the default voice apply automatically in every session, add the always-on flag. It appends a pointer to your global `~/.claude/CLAUDE.md` and a small SessionStart hook to `~/.claude/settings.json`. Both edits are idempotent and touch nothing else in your config.
+
+```powershell
+./voz/install.ps1 -AlwaysOn
+```
+```bash
+bash voz/install.sh --always-on
+```
+
+Always-on needs Python on your PATH, since the hook is a short Python script. If Python is missing the installer skips the wiring and tells you, leaving the skill itself installed.
+
+### Manual install
+
+If you would rather not run a script, copy the folder yourself:
 ```sh
 git clone https://github.com/ojesusmp/voz.git ~/.claude/skills/voz
 ```
 
-Claude Code picks it up on the next session. To verify, ask Claude to "write a short product description and avoid AI tells", or name a register: "rewrite this in the journalist register."
+### Verify
+
+Reload VSCode (`Developer: Reload Window`) or start a new Claude Code session, then ask Claude to "write a short product description and avoid AI tells", or name a register: "rewrite this in the journalist register."
 
 ## How it was built
 
