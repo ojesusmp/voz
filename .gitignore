@@ -1,0 +1,4 @@
+.omc/
+*.log
+.DS_Store
+Thumbs.db
