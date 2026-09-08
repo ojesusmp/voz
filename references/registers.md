@@ -1,10 +1,28 @@
 # The nine registers
 
-Each register changes diction, rhythm, and rhetorical stance to fit a reader and a purpose. All nine keep the kill-list rules from `ai-tells.md`: no AI tells, ever, in any voice. What changes is everything else.
+Each register changes diction, rhythm, and rhetorical stance to fit a reader and a purpose. All nine keep the kill-list rules from `ai-tells.md`, with the single set of exceptions in the table below. What changes is everything else.
 
 Foundational principle (Halliday's register theory, and [OpenOregon Technical Writing 2e §8.4](https://openoregon.pressbooks.pub/techwriting2e/chapter/8-4-tone/)): the writer's stance should match the audience and the purpose. Consistent, not identical. Pick the register from the artifact and the reader, then commit to it.
 
 ---
+
+
+## Shapes a register may use on purpose
+
+The kill-list in `SKILL.md` describes the default voice. A named register may use a few of those shapes deliberately, and this table is the whole list. Anything not on it stays out of every register.
+
+| Shape the default avoids | Allowed on purpose in |
+|---|---|
+| Rule of three, anaphora | Motivational only. Marketing avoids it too: see the tricolon slogan on its own Avoid list. |
+| Fragments stacked for drama | Marketing, motivational. A single fragment needs no exception; it is allowed everywhere. |
+| Passive voice | Technical (when the system is the actor), legal |
+| Enumerated near-synonyms | Legal ("any claim, demand, action, or proceeding") |
+| A question aimed at agreement | Salesman, one to one only |
+| Hedged forward-looking language | Corporate ("we expect") |
+
+Repeating a word rather than rotating synonyms is not on this table, because it is the default rule everywhere, not an exception. Two things are permanently excluded: **em dashes**, which are zero in every register, and **invented facts**, which no voice permits.
+
+Reach for an exception deliberately. If the register is not named above for that shape, the kill-list applies.
 
 ## 1. Empathetic-neutral (the default)
 

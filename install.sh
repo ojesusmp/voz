@@ -41,6 +41,8 @@ mkdir -p "$DEST/references" "$DEST/scripts"
 cp "$SRC/SKILL.md" "$SRC/README.md" "$SRC/LICENSE" "$DEST/"
 cp "$SRC"/references/* "$DEST/references/"
 cp "$SRC"/scripts/* "$DEST/scripts/"
+# tests/ is inert at runtime, but shipping it means an install can check its own parity.
+[ -d "$SRC/tests" ] && cp -R "$SRC/tests" "$DEST/"
 echo "voz skill installed to $DEST"
 
 # Optional always-on wiring.

@@ -38,6 +38,10 @@ New-Item -ItemType Directory -Force -Path $dest, (Join-Path $dest 'references'),
 Copy-Item (Join-Path $src 'SKILL.md'), (Join-Path $src 'README.md'), (Join-Path $src 'LICENSE') $dest -Force
 Copy-Item (Join-Path $src 'references\*') (Join-Path $dest 'references') -Force
 Copy-Item (Join-Path $src 'scripts\*') (Join-Path $dest 'scripts') -Force
+# tests/ is inert at runtime, but shipping it means an install can check its own parity.
+if (Test-Path (Join-Path $src 'tests')) {
+    Copy-Item (Join-Path $src 'tests') $dest -Recurse -Force
+}
 Write-Host "voz skill installed to $dest" -ForegroundColor Green
 
 # Optional always-on wiring.
