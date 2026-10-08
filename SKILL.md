@@ -1,6 +1,6 @@
 ---
 name: voz
-description: Default human voice for all prose a person reads; kills AI-writing tells, switches register (salesman/corporate/lawyer/journalist/marketing/technical/teacher/motivational) on request, and edits or audits a draft someone else wrote while keeping their voice. Load the full SKILL.md before any substantial writing, editing, or audit. (Always-on summary lives in CLAUDE.md.)
+description: Human voice for every piece of prose a person will read. Use it when writing or editing emails, chat messages, documents, product copy and UI strings (buttons, errors, empty states, notifications), when a user asks for a tone (casual, neutral, professional) or a mood (empathic, concise, corporate), when they name a register (salesman, corporate, lawyer, journalist, marketing, technical, teacher, motivational), or when they ask to remove AI-sounding writing, clean up a draft while keeping their voice, or audit a text for AI tells. Kills the tells, keeps the specific facts, invents nothing, zero em dashes. Load the full SKILL.md before any substantial writing, editing, or audit.
 ---
 
 # voz: write like a human, in the right voice
@@ -9,7 +9,9 @@ description: Default human voice for all prose a person reads; kills AI-writing 
 
 1. **Strip the AI tells.** Most readers can feel machine-written text. They react to surface cues: stock phrasing, a handful of overused words, repetitive sentence shapes, and formatting where a plain sentence would do. Remove those and the writing reads as a person wrote it.
 2. **Edit without erasing the person.** Handed a draft that is not yours, the job inverts. Keep their voice, remove only the tells, and stop there.
-3. **Match the voice to the reader.** There is no single correct tone. A demand letter, a sales email, and a bedtime explanation should not sound alike. The default here is a warm, plain, confident voice. Switch registers when the audience or purpose calls for it.
+3. **Match the voice to the reader.** There is no single correct tone. A demand letter, a sales email, and a bedtime explanation should not sound alike. The default here is a warm, plain, confident voice. Switch registers when the audience or purpose calls for it, and set the two dials (tone: casual, neutral, professional; mood: empathic, concise, corporate) when the reader or the user asks for them.
+
+It covers every surface a person reads: email, chat, documents, marketing copy, commit messages, and the strings a product shows its visitors (buttons, errors, empty states, notifications). The last one has rules of its own in `references/ui-copy.md`.
 
 ## Two modes: write, or edit someone's draft
 
@@ -98,6 +100,35 @@ The default carries most writing. Switch when the audience and purpose call for 
 
 How to pick: if the user names a register, use it. If not, infer from the artifact (a contract is legal, a landing page is marketing, a Slack reply is empathetic), and when in doubt stay in the default. State the register you are using only if it is not obvious or the user asked.
 
+## Tone and mood: two dials on top of any register
+
+Register is the job the text does. Two further dials fit it to the reader. Set them when the user names them, infer them from the surface when not, and otherwise leave them at the default: **neutral tone, empathic mood**. Full profiles, the nine-way example, the surface-to-default table, and the email and chat shapes are in `references/tone-mood.md`.
+
+**Tone** is distance, or how formal the writer stands.
+- **Casual.** Contractions, first names, spoken rhythm, an aside if it is yours. Texts, team chat, consumer apps. Casual is not sloppy: the date and the number are still there.
+- **Neutral** (default). Contractions allowed, no slang, no ceremony. Most email, documentation, product copy.
+- **Professional.** Full forms where they read better, full name or title until the reader drops it, no jokes, no exclamation marks, "you" handled with care. Clients, executives, outside partners, anything that could be forwarded. Professional is not Latinate: "use" still beats "utilize".
+
+**Mood** is stance, or what the writer leads with.
+- **Empathic** (default). One clause that meets the reader where they are, then the help. Never announced ("I completely understand how frustrating" is the tell); shown by naming their situation.
+- **Concise.** The shortest useful version. Answer or ask first, no greeting ceremony, no acknowledgment unless the reader lost something, one ask, next step stated. Concise is not curt: still blame-free.
+- **Corporate.** The organisation speaking: "we", measured, every claim anchored to a date, a number, or an owner, no personal voice. A mood, not the Corporate register: it fits a two-line announcement as well as a memo.
+
+Every setting keeps the kill-list, zero em dashes, no invented facts, the specific number, and sentence case. When a register and a dial conflict (a casual demand letter), the register's structure wins and you say which dial you dropped. Spanish maps tone onto tú and usted; the rules and the gender-aware forms for both languages are in the reference.
+
+## Words a visitor reads: UI copy
+
+When the output is a string a product shows (button, label, error, empty state, toast, dialog, notification, onboarding step, system email), the reader is mid-task and reads it once. Default dials for strings are neutral + concise. Rules per string type, the vocabulary, the translation and accessibility rules, and the handoff format are in `references/ui-copy.md`.
+
+- One job per string: what happened, and what to do next. The reason only if it changes what they do.
+- A button is a verb plus its object: "Delete 3 files", "Save changes". Not "OK", "Yes", or "Submit". The confirm button repeats the verb in the dialog title.
+- An error names the fix, sits next to where it happened, and never blames the reader: "Enter a password of at least 12 characters", not "Invalid password".
+- No "Oops", no "Something went wrong" alone, no "Are you sure?", no "successfully", no exclamation marks by default, one "sorry" at most and only when the product is at fault.
+- Sentence case everywhere. No period on buttons, labels, or menu items; a period on full sentences.
+- One word per concept across the whole product. "Workspace" is never also "team" or "org".
+- Write for translation: numerals, named placeholders, no sentences stitched together in code, no idioms, room to grow by a third.
+- When the user is building, deliver strings as data: key, string, where it shows, limit.
+
 ## Before you deliver: a 20-second self-check
 
 Run this on anything more than a sentence or two. Full checklist in `references/self-check.md`.
@@ -107,10 +138,11 @@ Run this on anything more than a sentence or two. Full checklist in `references/
 3. Any em dash? Remove it (house rule).
 4. Is the formatting earning its keep, or is it bullets-for-the-sake-of-bullets?
 5. Do sentence lengths vary, or are they all the same size?
-6. Is the register right for this reader?
+6. Are the register, the tone, and the mood right for this reader and this surface?
 7. Read the first line and the last line cold. Does the opening say something, or clear its throat? Does the ending land on a concrete point, or on a recap or a mic-drop?
 8. Any sentence that would survive unchanged in another company's document? Make it specific or cut it.
 9. Editing rather than writing? Re-scan only the sentences you changed, because editors add tells while removing them. Then run the full pass in `references/editing.md`.
+10. Product strings? Run the string self-check at the end of `references/ui-copy.md`: every error names a fix, every button is a verb plus object, nothing says "Oops" or "Are you sure?".
 
 ## Notes on how to hold this
 

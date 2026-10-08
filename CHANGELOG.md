@@ -1,5 +1,72 @@
 # Changelog
 
+## 1.2.0 (2026-10-08)
+
+`voz` learned two dials, the words a visitor reads inside a product, and how to get into claude.ai.
+
+### The gap this closes
+
+Until now `voz` had one default voice and nine registers. A user who wanted the same email
+"more casual" or "shorter, and from the company, not from me" had no vocabulary for it, and the
+skill had nothing to say about the strings a product shows: a button, an error, an empty state.
+Those strings are prose a person reads, often while annoyed, and they were being written on
+instinct. This release names the dials and writes the rules.
+
+### Added
+
+- **Tone and mood dials.** Tone is distance: casual, neutral, professional. Mood is what the writer
+  leads with: empathic, concise, corporate. Both sit on top of any register. Default is neutral +
+  empathic; chat is casual + concise; email to anyone outside the company is professional +
+  empathic; product strings are neutral + concise. When a register and a dial conflict, the
+  register's structure wins and the skill says which dial it dropped.
+- **`references/tone-mood.md`**: the two profile tables, the same declined-payment message written
+  nine ways so the reader can see what moves and what does not, a surface-to-default table, and
+  the shapes of an email, a chat message, a follow-up, a no, bad news and an apology. Spanish maps
+  tone onto tú and usted, with gender-aware forms for both languages.
+- **`references/ui-copy.md`**: rules per string type (buttons, labels, errors, empty states,
+  destructive dialogs, toasts, loading, tooltips, notifications and system emails, toggles,
+  badges), a mechanics table (case, periods, exclamation marks, numerals, dates, please, sorry),
+  the verbs that look interchangeable and are not (delete, remove, clear, discard), translation
+  and accessibility rules, the developer handoff table, and a nine-line self-check.
+- **Changing the tone on request** in edit mode: move the dial, keep their vocabulary, facts and
+  order, name the shift in What changed.
+- **`scripts/package_claude_ai.py`** builds `dist/voz.zip` in the shape claude.ai accepts: one
+  top-level `voz/` folder with `SKILL.md`, `LICENSE` and `references/`. Scripts and tests stay out.
+- **`tests/lint-output.py`**: a deterministic audit of text voz produced, in the same
+  `pattern | line | fix` shape as audit mode. It reads the kill-list from `SKILL.md` so the two
+  cannot drift, and `--ui` adds the string anti-patterns.
+- **`tests/fixtures/tone-mood-brief.md`** and its key: one email in a named setting with five
+  facts that must survive, and one destructive dialog plus toast as a developer key table.
+- The coverage check now counts its own assertions (259, up from 104) and also verifies the
+  post-edit checklist numbering, that every reference is pointed at from `SKILL.md`, that the
+  frontmatter satisfies the Agent Skills spec, that the Spanish in the catalog carries its accents,
+  and that the claude.ai zip builds with the right shape.
+
+### Changed
+
+- The frontmatter description now names the surfaces and the dials so claude.ai triggers the skill
+  on an email, a message, a UI string, or a tone request. It no longer mentions `CLAUDE.md`, which
+  means nothing in a chat.
+- The SessionStart banner and the `CLAUDE.md` pointer describe the dials and the UI copy rules.
+- Register 1 is "Empathetic (the default)", not "Empathetic-neutral", so it stops colliding with
+  the neutral tone.
+- The self-check gained a dials question and a product-strings step.
+
+### Fixed
+
+- The post-edit checks in `references/editing.md` were numbered 1 to 9, then 13, 14, 10, 11, 12,
+  15. They now run 1 to 23, and the test enforces it.
+- The Spanish section of `references/ai-tells.md` had lost its accents (señalar, también,
+  posición, conclusión).
+- `tests/fixtures/KEY-fresh.md` called its draft `test-draft-2.md`; the file is `fresh-draft.md`.
+
+### Measured
+
+Fresh-context functional run, 2026-10-08, with the model under test barred from the keys. On
+`tone-mood-brief.md`: **8 of 8** on the email, **8 of 8** on the strings, both restraint checks
+held, and `lint-output.py --ui` reported zero findings. The audit of `fresh-draft.md` is recorded
+alongside it in `tests/runs/2026-10-08-tone-mood-ui.md`.
+
 ## 1.1.0 (2026-09-08)
 
 `voz` learned to edit somebody else's writing without turning it into `voz`.

@@ -129,14 +129,14 @@ check against real Spanish drafts, not as evidence, and verify before relying on
 client-facing.
 
 **Stock phrases:** "en el mundo actual", "en la era digital", "cabe destacar", "cabe mencionar",
-"es importante destacar/mencionar/senalar", "sin lugar a dudas", "sin duda alguna", "en
+"es importante destacar/mencionar/señalar", "sin lugar a dudas", "sin duda alguna", "en
 definitiva", "en resumen", "un abanico de", "una amplia gama de", "el mundo de", "a la hora de",
-"no solo X, sino tambien Y" (the Spanish negative parallelism), "sumergirse en" (the local
+"no solo X, sino también Y" (the Spanish negative parallelism), "sumergirse en" (the local
 "delve"), "desbloquear el potencial", "llevar al siguiente nivel", "marcar la diferencia".
 
 **Shapes:** the same rule of three, the same "-ando/-iendo" significance tail
-("consolidando su posicion como", "reflejando su compromiso con"), and the same closing
-"En conclusion" recap. Spanish tolerates longer sentences than English, so length alone is a
+("consolidando su posición como", "reflejando su compromiso con"), and the same closing
+"En conclusión" recap. Spanish tolerates longer sentences than English, so length alone is a
 weaker signal there; tangle still is not.
 
 **One thing that does not transfer:** the em dash. The raya is standard Spanish punctuation for
