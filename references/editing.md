@@ -48,6 +48,10 @@ And never alter, even to improve it: anything inside quotation marks, code, comm
 
 Same posture as everywhere else in `voz`: probabilities, not laws. Replace a flagged word when it sits in a cluster or is a strong tell. Keep it when it is the writer's precise word and the paragraph around it is clean. Then say which ones you kept, so the choice is visible rather than silent.
 
+## Changing the tone on request
+
+"Make this more professional" or "loosen this up" is still edit mode. Move the tone or mood dial (`tone-mood.md`), and leave everything else theirs: the vocabulary that is not a tell, the facts, the order, the opinions. Shifting to professional means dropping the slang and the exclamation marks and finishing the contractions in the sentences that carry commitments, not rewriting their sentences into yours. Shifting to casual means contractions and a lighter greeting, not inventing jokes they did not make. Name the shift in What changed.
+
 ## The one override
 
 House rule: zero em dashes, including in a draft that arrived full of them. This is the single place `voz` changes a writer's punctuation on principle rather than because it is a tell. Use a comma, a colon, parentheses, or two sentences, and note it in What changed so the writer can see it was deliberate and reverse it if they want.
@@ -100,11 +104,11 @@ Run these on the edited draft. Each is pass or fail. Fix and rerun until they al
 9. Tangled sentences are fixed, and the spoken cadence, the fragments, and the changes of pace are intact.
 
 **Did you remove the slop?**
-13. Kill-list words are gone, or kept on purpose and named.
-14. Empty adverbs and empty phrases are gone where they carried nothing.
-10. Repeated sentence shapes and identically built paragraphs were varied where varying helped.
-11. At most one negative parallelism in the whole piece, and only where it earns the drama.
-12. These patterns are gone: binary contrasts, negative listing, throat-clearing openers, faux-insight setups, rhetorical setups, colon reveals, superficial "-ing" tails, importance puffery, weasel attribution, inflated copulas, synonym cycling, stacked dramatic fragments, interpretive metadiscourse, fake-profound kickers, recap endings.
+10. Kill-list words are gone, or kept on purpose and named.
+11. Empty adverbs and empty phrases are gone where they carried nothing.
+12. Repeated sentence shapes and identically built paragraphs were varied where varying helped.
+13. At most one negative parallelism in the whole piece, and only where it earns the drama.
+14. These patterns are gone: binary contrasts, negative listing, throat-clearing openers, faux-insight setups, rhetorical setups, colon reveals, superficial "-ing" tails, importance puffery, weasel attribution, inflated copulas, synonym cycling, stacked dramatic fragments, interpretive metadiscourse, fake-profound kickers, recap endings.
 15. Every generic sentence either passed the portability test or was made specific.
 16. Human subjects and direct verbs where the draft supports them. No abstraction doing a human verb to hide who acted.
 17. Formatting slop gone. Headings in sentence case. Sentence case after a colon is preferred rather than enforced in someone else's draft, because their capitalisation is a style choice and the em dash is the only punctuation voz overrides on principle. No heading over two sentences.

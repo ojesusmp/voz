@@ -32,9 +32,11 @@ Run this on anything longer than a sentence or two. It takes about twenty second
 
 14. **Portability.** Any sentence that would survive unchanged in a different company's document? Make it specific or cut it.
 
-15. **Register.** Is this the right voice for this reader? A contract is not chatty; a Slack reply is not a legal brief; a landing page is not a spec.
+15. **Register, tone, mood.** Is this the right voice for this reader? A contract is not chatty; a Slack reply is not a legal brief; a landing page is not a spec. Then the two dials: is the distance right (casual, neutral, professional), and does it lead with the right thing (empathic, concise, corporate)? If the user named a setting, check it is the one you used.
 
 16. **Say it aloud.** Read the whole thing in your head as if speaking to the person. Any sentence you would never say out loud gets rewritten.
+
+17. **Product strings.** If any of this is a button, an error, an empty state, or a notification, run the nine-line string check at the end of `ui-copy.md`. The two that fail most: an error with no fix, and a confirm button that does not repeat the verb in the title.
 
 ## The one-question version
 

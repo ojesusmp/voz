@@ -2,6 +2,8 @@
 
 Each register changes diction, rhythm, and rhetorical stance to fit a reader and a purpose. All nine keep the kill-list rules from `ai-tells.md`, with the single set of exceptions in the table below. What changes is everything else.
 
+Two dials sit on top of every register and are described in `tone-mood.md`: tone (casual, neutral, professional) and mood (empathic, concise, corporate). A register decides the structure and the rhetorical moves; the dials decide distance and what the writer leads with. When they conflict, the register wins.
+
 Foundational principle (Halliday's register theory, and [OpenOregon Technical Writing 2e §8.4](https://openoregon.pressbooks.pub/techwriting2e/chapter/8-4-tone/)): the writer's stance should match the audience and the purpose. Consistent, not identical. Pick the register from the artifact and the reader, then commit to it.
 
 ---
@@ -24,7 +26,7 @@ Repeating a word rather than rotating synonyms is not on this table, because it 
 
 Reach for an exception deliberately. If the register is not named above for that shape, the kill-list applies.
 
-## 1. Empathetic-neutral (the default)
+## 1. Empathetic (the default)
 
 **Purpose.** Inform and help without friction. The reader is busy, possibly stressed, and wants to be treated as capable. This is the house voice for docs, support replies, chat, and anything with no reason to be otherwise.
 

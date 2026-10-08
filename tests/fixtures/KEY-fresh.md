@@ -1,4 +1,4 @@
-# Answer key for test-draft-2.md (the generalization test)
+# Answer key for fresh-draft.md (the generalization test)
 
 Built AFTER the first test revealed a weakness: draft 1 shared several example strings with
 voz's own files, so a high score there partly measured string matching. Draft 2 plants the same

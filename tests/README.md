@@ -5,17 +5,37 @@ read unless you run it on purpose.
 
 ## `coverage-check.py`
 
-The parity regression check. It asserts that every pattern, word class, mode and discipline the
-`no-ai-slop` skill covers is still present somewhere in voz, that the zero em dash house rule
-has not been weakened into an allowance, and that the "probabilities, not laws" posture survived
-the merge.
+The regression check. It asserts that every pattern, word class, mode, register, dial and
+discipline voz claims to cover is still present somewhere in it, that the zero em dash house rule
+has not been weakened into an allowance, that the "probabilities, not laws" posture survived, that
+the post-edit checklist is numbered in order, that every reference file is pointed at from
+`SKILL.md`, that the frontmatter satisfies the Agent Skills spec claude.ai and Claude Code share,
+and that `scripts/package_claude_ai.py` builds a zip with the shape claude.ai accepts.
 
 ```sh
 python tests/coverage-check.py
 ```
 
-Exit 0 means parity holds. Run it after editing voz, and after the twice-yearly refresh of the
-word list in `references/ai-tells.md`. No model in the loop, so the answer is the same every time.
+It prints how many checks it ran (267 at 1.2.0). Exit 0 means nothing was lost. Run it after
+editing voz, and after the twice-yearly refresh of the word list in `references/ai-tells.md`. No
+model in the loop, so the answer is the same every time.
+
+## `lint-output.py`
+
+The other direction: a deterministic check on text voz produced. Give it an email, a message, or
+a file of UI strings and it reports the mechanical half of the kill-list in audit shape
+(`pattern | line | fix`), reading the word and phrase lists straight out of `SKILL.md` so the two
+cannot drift. `--ui` adds the string rules (Oops, Are you sure?, successfully, generic buttons,
+exclamation marks, positional placeholders).
+
+```sh
+python tests/lint-output.py draft.md
+python tests/lint-output.py --ui strings.md
+```
+
+Exit 1 means it found something. It catches what a regex can catch and nothing else: a rule of
+three, a kicker, or a portability failure still need a reader. Do not run it on voz's own files,
+which quote every word they ban.
 
 ## `fixtures/`
 
@@ -44,15 +64,24 @@ is the one that matters.
 `fresh-draft.md` also plants one deliberately ambiguous line (three role words that might be
 three real roles). Hedging on it is correct. Confidently rewriting it is not.
 
+## `fixtures/tone-mood-brief.md` and `KEY-tone-mood.md`
+
+The 1.2.0 functional test. The brief asks for one email in a named setting (professional +
+concise) with five facts that must survive, and one destructive dialog plus its toast delivered as
+a developer key table at the product default. The key is mechanical where it can be: run
+`lint-output.py --ui` on the output first, then score the 16 rows and the 2 restraint checks.
+
 ## `fixtures/slop-draft.edited.md`
 
 A worked example of the output contract: the edited draft plus its What changed note. The rules
 describe that shape in prose, and a model copies an example far more reliably than it follows a
 description. It is a target, not the only correct edit.
 
-## `runs/`
+## Runs
 
-The evidence behind the numbers below. `2026-09-08-baseline.md` is the full pre-parity run.
+`2026-09-08-baseline.md` is the full pre-parity run. `2026-10-08-tone-mood-ui.md` records the
+1.2.0 functional test: a fresh-context audit of `fresh-draft.md` against `KEY-fresh.md`, and the
+tone/mood brief against `KEY-tone-mood.md`.
 
 ## Baseline
 
