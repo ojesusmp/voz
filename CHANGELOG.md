@@ -28,6 +28,13 @@ instinct. This release names the dials and writes the rules.
   badges), a mechanics table (case, periods, exclamation marks, numerals, dates, please, sorry),
   the verbs that look interchangeable and are not (delete, remove, clear, discard), translation
   and accessibility rules, the developer handoff table, and a nine-line self-check.
+- **Puerto Rican Spanish.** The Spanish `voz` writes is now the Spanish of Puerto Rico, named as
+  such: "tú" by default even in business, "usted" for government, legal, health or a reader who
+  used it first, "Saludos" as the everyday opener and closer, no "Estimado/a", US number and date
+  conventions (1,200.50, 12-hour clock, "6 de octubre de 2026"), a table of the peninsular words
+  that make text read as translated (ordenador, móvil, coche, pulsar, vídeo, vosotros), the
+  "ahorita" trap, and the declined-card message written three ways in Puerto Rican Spanish.
+  `lint-output.py --es-pr` flags the peninsular markers, slash gender forms and day-first dates.
 - **Changing the tone on request** in edit mode: move the dial, keep their vocabulary, facts and
   order, name the shift in What changed.
 - **`scripts/package_claude_ai.py`** builds `dist/voz.zip` in the shape claude.ai accepts: one
@@ -37,7 +44,7 @@ instinct. This release names the dials and writes the rules.
   cannot drift, and `--ui` adds the string anti-patterns.
 - **`tests/fixtures/tone-mood-brief.md`** and its key: one email in a named setting with five
   facts that must survive, and one destructive dialog plus toast as a developer key table.
-- The coverage check now counts its own assertions (259, up from 104) and also verifies the
+- The coverage check now counts its own assertions (267, up from 104) and also verifies the
   post-edit checklist numbering, that every reference is pointed at from `SKILL.md`, that the
   frontmatter satisfies the Agent Skills spec, that the Spanish in the catalog carries its accents,
   and that the claude.ai zip builds with the right shape.

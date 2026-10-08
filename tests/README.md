@@ -16,7 +16,7 @@ and that `scripts/package_claude_ai.py` builds a zip with the shape claude.ai ac
 python tests/coverage-check.py
 ```
 
-It prints how many checks it ran (259 at 1.2.0). Exit 0 means nothing was lost. Run it after
+It prints how many checks it ran (267 at 1.2.0). Exit 0 means nothing was lost. Run it after
 editing voz, and after the twice-yearly refresh of the word list in `references/ai-tells.md`. No
 model in the loop, so the answer is the same every time.
 

@@ -1,6 +1,6 @@
 # Brief: tone and mood, plus UI strings
 
-Two tasks. Read `SKILL.md`, `references/tone-mood.md` and `references/ui-copy.md` first.
+Three tasks. Read `SKILL.md`, `references/tone-mood.md` and `references/ui-copy.md` first.
 
 ## Task 1: an email
 
@@ -20,3 +20,9 @@ A user is about to delete a project called "Q3 budget" from a workspace shared w
 people. Deleted projects can be restored from Trash for 30 days. Produce the strings for the
 confirmation dialog (title, body, confirm button, cancel button) and for the toast after deletion
 (including an undo). Deliver them as a key table for the developer. Setting: the product default.
+
+## Task 3: the same email in Spanish
+
+Write the task 1 email again in Spanish, this time from the billing team of Lumen Books (not from
+Orlando personally) to Priya Nair, who lives in San Juan, Puerto Rico. Same facts. Setting:
+**neutral tone, empathic mood.**

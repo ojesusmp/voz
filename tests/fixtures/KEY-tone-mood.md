@@ -33,6 +33,23 @@ Target 8 of 8. E1 or E8 failing fails the task on its own.
 
 Target 8 of 8.
 
+## Task 3: the Spanish email (Puerto Rico, neutral + empathic)
+
+Run `python tests/lint-output.py --es-pr` on it first; any finding is a failure.
+
+| # | Check | Pass when |
+|---|---|---|
+| S1 | Facts survive | 4471, 6 de octubre de 2026, viernes 10 de octubre de 2026, lumenbooks.example/billing, billing@lumenbooks.example |
+| S2 | tú throughout | Second-person singular informal everywhere (actualiza, tu tarjeta, puedes). No "usted", no "vosotros". |
+| S3 | Puerto Rican vocabulary | No ordenador, móvil, pulsar, pinchar, vídeo, vale, coche. "Rechazada" or "declinada" both pass. |
+| S4 | Opener and closer | Opens with "Hola" or "Saludos" (or "Buenos días"); closes with "Saludos", "Cordialmente", or the team's name. No "Estimado/a", no "Bienvenido/a". |
+| S5 | Date written out | "6 de octubre de 2026" with a lowercase month. No numeric 6/10 or 10/6. |
+| S6 | Empathic, not announced | One clause naming her situation; no "Entendemos lo frustrante que". |
+| S7 | Blame-free | The payment or the bank is the actor ("el pago no se procesó", "la tarjeta fue rechazada"), not "no pagaste". |
+| S8 | Nothing invented | No cause beyond the decline itself, no discount, no "muchos clientes". Signed by the team, not by a named person. |
+
+Target 8 of 8.
+
 ## Preservation and restraint
 
 | # | Must hold |

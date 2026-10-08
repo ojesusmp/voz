@@ -91,11 +91,28 @@ Tone and mood decide the words. These decide the order, and they hold at any set
 
 **Apology.** One "sorry", tied to the specific thing, from the party at fault. Then the fix and the prevention. A second sorry weakens the first.
 
-## Spanish
+## Spanish (Puerto Rico)
 
-Tone maps onto the form of address. Casual is "tú", "hola", first names. Neutral is "tú" in consumer products and in most internal writing, "usted" where the reader, the region, or the company convention expects it; when unsure, write around the choice for a line or two with impersonal forms ("se puede", "hay que") rather than mixing. Professional is "usted", with the full name on first address. Never mix "tú" and "usted" inside one message.
+The Spanish `voz` writes is the Spanish of Puerto Rico. The variety matters more than it does in English, because a model's default Spanish is neutral or peninsular and a reader in San Juan can tell in one line. The vocabulary table and the Spanish filler list are in `ai-tells.md`, section 7.
 
-Gender: prefer forms that do not force one when you do not know the reader. "Te damos la bienvenida" instead of "Bienvenido/a", "Hola, equipo" instead of "Hola a todos", "las personas usuarias" when "los usuarios" would read as exclusive in a formal context. Do not invent spellings ("todxs", "tod@s") unless the house style already uses them.
+**Tone maps onto tú and usted, with a Puerto Rican default.** Puerto Rico uses "tú" far more widely than Spain or Mexico, including in business: a bank's app, a store's email, and a clinic's reminder text all say "tú". So:
+
+- Casual: "tú", "hola", first names, "dale" for agreement, "chévere" or "brutal" for approval only if the reader talks that way.
+- Neutral (default): "tú", with "hola" or "saludos" as the opener. This is also the default for a company writing to a customer.
+- Professional: "usted" when the reader is a government agency, a court, a lawyer, a doctor, an older customer, or an executive you have not met, or when the reader wrote to you in "usted". Otherwise professional Puerto Rican Spanish still allows "tú" with the full name and no slang. Mirror the reader: if they open in "usted", stay there.
+- Never mix "tú" and "usted" inside one message, and never use "vosotros"; the plural is "ustedes".
+
+**Openers and closers.** "Saludos" is the everyday Puerto Rican email opener and closer at casual and neutral tone, and "Saludos cordiales" at professional. "Buenos días" and "Buenas tardes" are safe openers at any tone. "Cordialmente" and "Atentamente" close a professional message. "Bendiciones" is a common warm closer in Puerto Rico and carries a religious note; use it only when the reader uses it first. Skip "Estimado/a": it forces a gender or a slash. Open with "Buenos días, [full name]:" or "Saludos, [name]:" instead.
+
+**Gender.** Prefer forms that do not force a gender: "Te damos la bienvenida" instead of "Bienvenido/a", "Hola, equipo" instead of "Hola a todos", "la persona que..." and "quienes..." instead of "el usuario que...". In Puerto Rican formal and government writing "todos y todas" is accepted doubling; use it sparingly. Do not write "todxs", "tod@s" or "todes" unless the house style already does. Honorifics: "Sr." and "Sra." only when the reader uses them, never "Srta.".
+
+**Numbers, dates and money.** Puerto Rico follows US conventions: the decimal is a point and the thousands separator a comma (1,200.50), the clock is 12-hour ("2:10 p.m."), the currency is the dollar with the sign first ("$120.00"), and short dates run month/day/year (10/6/2026). Written out, the date is "6 de octubre de 2026", lowercase month. Never write "6/10/2026" meaning 6 October; a Puerto Rican reader sees 10 June.
+
+**The same message, three ways.** The declined-card message from above, in Puerto Rican Spanish.
+
+- Casual + concise: "Hola Dana, tu tarjeta fue rechazada. Actualízala antes del viernes para que la cuenta no se suspenda: [enlace]."
+- Neutral + empathic: "Hola Dana, el pago de anoche no se procesó. Casi siempre es que el banco rechazó el cargo, no un problema con tus datos. Actualiza la tarjeta antes del viernes 10 de octubre y la cuenta sigue activa: [enlace]."
+- Professional + corporate: "Buenos días, Dana Whitfield: El pago de la cuenta 4471 fue rechazado el 6 de octubre de 2026. El servicio continúa activo hasta el viernes 10 de octubre de 2026. Para evitar una interrupción, actualice el método de pago antes de esa fecha. Puede comunicarse con el equipo de facturación en billing@example.com."
 
 Mood translates directly. Concise Spanish still runs a little longer than concise English; tangle is the problem, not length.
 

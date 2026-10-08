@@ -120,24 +120,51 @@ Example tell: "It's not a product launch. It's a paradigm shift." A reader who s
 
 ---
 
-## 7. Spanish (editorial, unverified)
+## 7. Spanish, Puerto Rico (editorial, unverified)
 
-`voz` is named in Spanish and gets used on Spanish copy, but every source cited above studied
-English. This section is working knowledge, **not** backed by a corpus study or a catalog, and it
-carries no dates because nobody has measured when these rose. Treat it as a starting list to
-check against real Spanish drafts, not as evidence, and verify before relying on it for anything
-client-facing.
+`voz` is named in Spanish and gets used on Spanish copy, and the Spanish it writes is the Spanish
+of Puerto Rico. Every source cited above studied English. This section is working knowledge,
+**not** backed by a corpus study or a catalog, and it carries no dates because nobody has measured
+when these rose. Treat it as a starting list to check against real drafts, not as evidence, and
+verify before relying on it for anything client-facing.
 
-**Stock phrases:** "en el mundo actual", "en la era digital", "cabe destacar", "cabe mencionar",
-"es importante destacar/mencionar/señalar", "sin lugar a dudas", "sin duda alguna", "en
-definitiva", "en resumen", "un abanico de", "una amplia gama de", "el mundo de", "a la hora de",
-"no solo X, sino también Y" (the Spanish negative parallelism), "sumergirse en" (the local
-"delve"), "desbloquear el potencial", "llevar al siguiente nivel", "marcar la diferencia".
+**Stock phrases** (the same AI filler in any variety of Spanish): "en el mundo actual", "en la
+era digital", "cabe destacar", "cabe mencionar", "es importante destacar/mencionar/señalar", "sin
+lugar a dudas", "sin duda alguna", "en definitiva", "en resumen", "un abanico de", "una amplia
+gama de", "el mundo de", "a la hora de", "no solo X, sino también Y" (the Spanish negative
+parallelism), "sumergirse en" and "adentrarse en" (the local "delve"), "desbloquear el
+potencial", "llevar al siguiente nivel", "marcar la diferencia", "en aras de", "de cara a".
 
-**Shapes:** the same rule of three, the same "-ando/-iendo" significance tail
-("consolidando su posición como", "reflejando su compromiso con"), and the same closing
-"En conclusión" recap. Spanish tolerates longer sentences than English, so length alone is a
-weaker signal there; tangle still is not.
+**Shapes:** the same rule of three, the same "-ando/-iendo" significance tail ("consolidando su
+posición como", "reflejando su compromiso con"), and the same closing "En conclusión" recap.
+Spanish tolerates longer sentences than English, so length alone is a weaker signal there; tangle
+still is not.
+
+**Words that mark text as not written for Puerto Rico.** A model's default Spanish is neutral or
+peninsular. To a reader in Puerto Rico the result reads as translated, which is its own tell even
+when every sentence is grammatical. Replace them:
+
+| Reads as foreign in Puerto Rico | Write instead |
+|---|---|
+| ordenador | computadora |
+| móvil (the phone) | celular |
+| coche | carro |
+| aparcar, aparcamiento | estacionar, estacionamiento ("parking" is also said) |
+| conducir | manejar, or "guiar" in casual speech |
+| fichero | archivo |
+| ratón | mouse |
+| pulsar, pinchar | oprimir, hacer clic, presionar |
+| vídeo | video |
+| vale, guay, tío | "está bien", "dale", "chévere", "brutal" (casual tone only) |
+| vosotros, os, vuestro | ustedes, les, su |
+| ahorita (meaning right now) | ahora mismo. In Puerto Rico "ahorita" means in a little while, so a model using it for "right now" says the opposite. |
+| avoiding "coger" as rude | no avoidance needed; "coger" is ordinary in Puerto Rico ("coger la guagua"). The taboo is Mexican and Argentine, not Puerto Rican. |
+
+Anglicisms are part of the variety, not errors: "email", "app", "parking", "el chat", "un link",
+"chequear" (to check) in casual writing. In formal writing prefer "correo electrónico",
+"aplicación", "estacionamiento", "enlace", "revisar", and keep the casual forms for casual tone.
+"Declinada" for a declined card is common Puerto Rican banking usage and acceptable at casual
+and neutral tone; "rechazada" is the standard word.
 
 **One thing that does not transfer:** the em dash. The raya is standard Spanish punctuation for
 dialogue and parenthetical asides, so its presence carries no signal at all in Spanish prose. The

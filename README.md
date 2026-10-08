@@ -56,7 +56,7 @@ scripts/
   wire_settings.py        idempotent always-on wiring (CLAUDE.md + settings.json)
   package_claude_ai.py    builds dist/voz.zip for upload to claude.ai
 tests/
-  coverage-check.py       259 assertions that nothing was lost; no model in the loop
+  coverage-check.py       267 assertions that nothing was lost; no model in the loop
   lint-output.py          deterministic audit of text voz produced (emails, messages, UI strings)
   fixtures/               planted drafts, briefs, their keys, and a worked edited example
   runs/                   the measured results, kept as evidence
@@ -126,7 +126,7 @@ Reload VSCode (`Developer: Reload Window`) or start a new Claude Code session, t
 python tests/coverage-check.py
 ```
 
-259 assertions, no model in the loop, so the answer is the same every run. It checks that every pattern, word class, mode, register and dial is present, that the SKILL.md kill-list is a subset of the catalog it points at, that every pattern the edit checklist demands be removed is one SKILL.md actually names, that all nine registers survive, that the zero em dash rule has not been softened into an allowance, that the frontmatter is valid for claude.ai, and that the claude.ai zip builds with the right shape. Exit 0 means nothing was lost. Run it after editing the skill and after each refresh of the word list.
+267 assertions, no model in the loop, so the answer is the same every run. It checks that every pattern, word class, mode, register and dial is present, that the SKILL.md kill-list is a subset of the catalog it points at, that every pattern the edit checklist demands be removed is one SKILL.md actually names, that all nine registers survive, that the zero em dash rule has not been softened into an allowance, that the frontmatter is valid for claude.ai, and that the claude.ai zip builds with the right shape. Exit 0 means nothing was lost. Run it after editing the skill and after each refresh of the word list.
 
 ```sh
 python tests/lint-output.py --ui strings.md
@@ -151,7 +151,7 @@ Two honest caveats, baked into the skill:
 
 - **The word list ages.** "delve" spiked in 2023 and faded by 2025. The list is datable and meant to be refreshed. The patterns outlast the words.
 - **No single tell is proof.** One em dash means nothing; the "em dash equals robot" claim is overstated. The skill judges clusters, and it is writing guidance, not a detector. The aim is to write well, not to accuse anyone's text.
-- **The Spanish section is unverified.** Every source above studied English. `references/ai-tells.md` carries a Spanish section marked (editorial, unverified) because the skill is named in Spanish and gets used on Spanish copy, but no corpus study backs that list. Check it against real drafts before relying on it. It does record one thing worth knowing: the raya is standard Spanish punctuation, so a Spanish writer's em dash is evidence of nothing at all.
+- **The Spanish is Puerto Rican, and the Spanish section is unverified.** Every source above studied English. `references/ai-tells.md` carries a Spanish section marked (editorial, unverified) because the skill is named in Spanish and gets used on Spanish copy, but no corpus study backs that list. It is written for Puerto Rico: "tú" by default even in business, "usted" for government, legal and health or a reader who used it first, computadora and celular rather than ordenador and móvil, US number and date formats, and a table of the peninsular words that make text read as translated. Check it against real drafts before relying on it. It does record one thing worth knowing: the raya is standard Spanish punctuation, so a Spanish writer's em dash is evidence of nothing at all.
 
 ## Changes
 

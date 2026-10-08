@@ -114,7 +114,7 @@ Register is the job the text does. Two further dials fit it to the reader. Set t
 - **Concise.** The shortest useful version. Answer or ask first, no greeting ceremony, no acknowledgment unless the reader lost something, one ask, next step stated. Concise is not curt: still blame-free.
 - **Corporate.** The organisation speaking: "we", measured, every claim anchored to a date, a number, or an owner, no personal voice. A mood, not the Corporate register: it fits a two-line announcement as well as a memo.
 
-Every setting keeps the kill-list, zero em dashes, no invented facts, the specific number, and sentence case. When a register and a dial conflict (a casual demand letter), the register's structure wins and you say which dial you dropped. Spanish maps tone onto tú and usted; the rules and the gender-aware forms for both languages are in the reference.
+Every setting keeps the kill-list, zero em dashes, no invented facts, the specific number, and sentence case. When a register and a dial conflict (a casual demand letter), the register's structure wins and you say which dial you dropped. The Spanish `voz` writes is Puerto Rican Spanish: "tú" by default even in business, "usted" for government, legal, health, or a reader who used it first, computadora and celular rather than ordenador and móvil, US number and date formats. The rules, the vocabulary table, and the gender-aware forms for both languages are in `references/tone-mood.md` and section 7 of `references/ai-tells.md`.
 
 ## Words a visitor reads: UI copy
 

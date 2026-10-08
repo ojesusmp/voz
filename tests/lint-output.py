@@ -10,6 +10,7 @@ phrases from SKILL.md so this file cannot drift from the skill.
 
     python tests/lint-output.py draft.md [more files]
     python tests/lint-output.py --ui strings.md     # also apply the UI-string rules
+    python tests/lint-output.py --es-pr correo.md   # also flag Spanish that is not Puerto Rican
 
 Do not run it on voz's own files: they quote every word they ban, and quoting is not using.
 """
@@ -67,7 +68,25 @@ UI_PATTERNS = [
 ]
 
 
-def lint(path: pathlib.Path, ui: bool):
+ES_PR_PATTERNS = [
+    ('peninsular word', re.compile(r'(?i)\b(ordenador(es)?|m\u00f3vil(es)?|coche|aparca\w*|fichero|rat\u00f3n|v\u00eddeo|zumo|patata|vosotr[oa]s|vuestr[oa]s?)\b'), 'see the Puerto Rico table in ai-tells.md section 7'),
+    ('peninsular verb', re.compile(r'(?i)\b(puls[ae]|pulsar|pinch[ae]|pinchar)\b'), 'oprime, haz clic, presiona'),
+    ('peninsular filler', re.compile(r'(?i)\b(vale|guay|t\u00edo)\b[,.!?]'), 'est\u00e1 bien, dale, ch\u00e9vere (casual only)'),
+    ('ahorita', re.compile(r'(?i)\bahorita\b'), 'in Puerto Rico this means "in a while"; use "ahora mismo"'),
+    ('slash gender form', re.compile(r'(?i)\b\w+[oa]/a\b|\b\w+@s\b|\b\w+xs\b|\btodes\b'), 'a form that does not force a gender'),
+    ('Srta.', re.compile(r'Srta\.'), 'Sra. only if the reader uses it, else the full name'),
+    ('numeric short date', re.compile(r'\b(0?[1-9]|[12]\d|3[01])/(0?[1-9]|1[0-2])/\d{2,4}\b'), 'ambiguous between day-first and month-first; write the month out: "6 de octubre de 2026"'),
+    ('tu/usted mix', re.compile(r'(?i)\busted(es)?\b'), 'check: this message also uses t\u00fa forms (flagged only when both appear)'),
+]
+
+
+def mixes_tu_usted(text: str) -> bool:
+    has_usted = re.search(r'(?i)\busted\b', text) is not None
+    has_tu = re.search(r'(?i)\b(tu|tus|te|t\u00fa|contigo)\b', text) is not None
+    return has_usted and has_tu
+
+
+def lint(path: pathlib.Path, ui: bool, es_pr: bool = False):
     text = path.read_text(encoding='utf-8')
     lines = text.splitlines()
     findings = []
@@ -84,6 +103,12 @@ def lint(path: pathlib.Path, ui: bool):
         for name, rx, fix in PROSE_PATTERNS + (UI_PATTERNS if ui else []):
             if rx.search(line):
                 findings.append((name, i, line.strip(), fix))
+        if es_pr:
+            for name, rx, fix in ES_PR_PATTERNS:
+                if name == 'tu/usted mix' and not mixes_tu_usted(text):
+                    continue
+                if rx.search(line):
+                    findings.append((name, i, line.strip(), fix))
     return findings
 
 
@@ -91,11 +116,12 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('files', nargs='+')
     ap.add_argument('--ui', action='store_true', help='also apply the UI-string rules')
+    ap.add_argument('--es-pr', action='store_true', help='also apply the Puerto Rican Spanish rules')
     args = ap.parse_args()
     total = 0
     for f in args.files:
         p = pathlib.Path(f)
-        found = lint(p, args.ui)
+        found = lint(p, args.ui, args.es_pr)
         total += len(found)
         print("%s: %d finding(s)" % (p, len(found)))
         for name, ln, line, fix in found:

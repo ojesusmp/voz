@@ -241,7 +241,7 @@ def main():
     check('probabilities, not laws' in blob, "the probabilities-not-laws posture was lost")
 
     # Spanish in the catalog carries its accents; a skill named in Spanish cannot ship "conclusion".
-    for bad in ('senalar', 'tambien', 'en conclusion"', 'posicion'):
+    for bad in ('senalar', 'tambien', 'en conclusion"', 'posicion', 'movil', 'raton'):
         check(bad not in tells, 'unaccented Spanish in ai-tells.md: %s' % bad)
 
     # The claude.ai zip has the right shape: one top folder, SKILL.md inside it, every reference.
@@ -264,6 +264,21 @@ def main():
                        capture_output=True, text=True)
     check(r.returncode == 1 and 'kill-list word "embark"' in r.stdout and 'recap ending' in r.stdout,
           'lint-output.py did not find the planted tells in fresh-draft.md')
+
+    with tempfile.TemporaryDirectory() as td:
+        bad = pathlib.Path(td) / 'bad.md'
+        bad.write_text('Pulsa el bot\u00f3n del ordenador ahorita, Estimado/a cliente. Fecha: 6/10/2026.\n', encoding='utf-8')
+        r = subprocess.run([_sys.executable, str(VOZ / 'tests/lint-output.py'), '--es-pr', str(bad)],
+                           capture_output=True, text=True)
+        for want in ('peninsular word', 'peninsular verb', 'ahorita', 'slash gender form', 'numeric short date'):
+            check(want in r.stdout, 'lint-output.py --es-pr missed: %s' % want)
+        good = pathlib.Path(td) / 'good.md'
+        tm = (VOZ / 'references/tone-mood.md').read_text(encoding='utf-8')
+        ex = re.search(r'(?s)\*\*The same message, three ways\.\*\*.*?\n\n', tm).group(0)
+        good.write_text(ex, encoding='utf-8')
+        r = subprocess.run([_sys.executable, str(VOZ / 'tests/lint-output.py'), '--es-pr', str(good)],
+                           capture_output=True, text=True)
+        check(r.returncode == 0, 'lint-output.py --es-pr flags the skill\'s own Puerto Rican example:\n%s' % r.stdout)
 
     if FAILS:
         for f in FAILS:
