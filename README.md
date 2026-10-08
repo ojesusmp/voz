@@ -56,7 +56,7 @@ scripts/
   wire_settings.py        idempotent always-on wiring (CLAUDE.md + settings.json)
   package_claude_ai.py    builds dist/voz.zip for upload to claude.ai
 tests/
-  coverage-check.py       267 assertions that nothing was lost; no model in the loop
+  coverage-check.py       268 assertions that nothing was lost; no model in the loop
   lint-output.py          deterministic audit of text voz produced (emails, messages, UI strings)
   fixtures/               planted drafts, briefs, their keys, and a worked edited example
   runs/                   the measured results, kept as evidence
@@ -126,7 +126,7 @@ Reload VSCode (`Developer: Reload Window`) or start a new Claude Code session, t
 python tests/coverage-check.py
 ```
 
-267 assertions, no model in the loop, so the answer is the same every run. It checks that every pattern, word class, mode, register and dial is present, that the SKILL.md kill-list is a subset of the catalog it points at, that every pattern the edit checklist demands be removed is one SKILL.md actually names, that all nine registers survive, that the zero em dash rule has not been softened into an allowance, that the frontmatter is valid for claude.ai, and that the claude.ai zip builds with the right shape. Exit 0 means nothing was lost. Run it after editing the skill and after each refresh of the word list.
+268 assertions, no model in the loop, so the answer is the same every run. It checks that every pattern, word class, mode, register and dial is present, that the SKILL.md kill-list is a subset of the catalog it points at, that every pattern the edit checklist demands be removed is one SKILL.md actually names, that all nine registers survive, that the zero em dash rule has not been softened into an allowance, that the frontmatter is valid for claude.ai, and that the claude.ai zip builds with the right shape. Exit 0 means nothing was lost. Run it after editing the skill and after each refresh of the word list.
 
 ```sh
 python tests/lint-output.py --ui strings.md

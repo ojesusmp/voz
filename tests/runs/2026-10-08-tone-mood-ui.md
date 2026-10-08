@@ -1,4 +1,4 @@
-# Run 2026-10-08: tone and mood dials, UI copy, and the fresh-draft regression
+# Run 2026-10-08: tone and mood dials, UI copy, Puerto Rican Spanish, and the fresh-draft regression
 
 Method: two fresh-context sessions, each given `SKILL.md` and the seven reference files, barred
 from the keys, `tests/runs/` and `tests/README.md`. Scored by hand against `KEY-fresh.md` and
@@ -65,6 +65,68 @@ keep "Honestly?").
 | P2 setting stated once | pass, one line |
 
 **8 of 8, 8 of 8, 2 of 2.** `lint-output.py --ui`: 0 findings.
+
+### tone-mood-brief.md task 3: Puerto Rican Spanish (new in 1.2.0)
+
+Two fresh-context runs. Run 1 was against the skill as first written; run 2 after the fix it
+exposed. Both ran `lint-output.py --es-pr` clean.
+
+| Row | Run 1 | Run 2 |
+|---|---|---|
+| S1 facts survive | pass | pass |
+| S2 tú throughout | pass | pass |
+| S3 Puerto Rican vocabulary | pass ("rechazado", no peninsular markers) | pass ("una tarjeta al día") |
+| S4 opener and closer | pass ("Hola Priya:", "Saludos," + team) | pass |
+| S5 date written out | pass | pass |
+| S6 empathic, not announced | pass | pass |
+| S7 blame-free | pass | pass |
+| S8 nothing invented | **fail**: "Casi siempre es el banco el que rechaza el cargo" supplies a cause the brief did not give | pass |
+
+**Run 1: 7 of 8. Run 2: 8 of 8.**
+
+What run 1 exposed: the skill's own empathic examples (English nine-way and Spanish three-way)
+made the same move, "that's usually the bank", so the model was copying the skill. The examples
+were rewritten to acknowledge the situation without asserting a cause, the mood table and
+SKILL.md now say that empathy never invents a cause the writer does not know, and the coverage
+check asserts the rule is present. Run 2 confirmed the fix with the same brief and a fresh context.
+
+## Raw output: Spanish email, run 1
+
+Setting: neutral tone, empathic mood, Puerto Rican Spanish ("tú").
+
+**Asunto:** Pago del 6 de octubre rechazado: actualiza tu tarjeta antes del viernes 10 de octubre
+
+Hola Priya:
+
+El pago del 6 de octubre de 2026 con tu tarjeta terminada en 4471 fue rechazado. Casi siempre es el banco el que rechaza el cargo, no un problema con tu cuenta ni con tus datos.
+
+Tu cuenta sigue activa hasta el viernes 10 de octubre de 2026. Después de esa fecha se pausa hasta que actualices la tarjeta.
+
+Puedes actualizarla en lumenbooks.example/billing.
+
+Si el banco te pide algo de nuestra parte, o prefieres que lo revisemos contigo, escríbenos a billing@lumenbooks.example.
+
+Saludos,
+El equipo de facturación de Lumen Books
+
+
+## Raw output: Spanish email, run 2
+
+Setting used: neutral tone, empathic mood, Puerto Rican Spanish (tú), sender is the billing team.
+
+**Asunto:** Tarjeta terminada en 4471: actualízala antes del viernes 10 de octubre de 2026
+
+Hola Priya:
+
+El pago del 6 de octubre de 2026 con tu tarjeta terminada en 4471 fue rechazado, así que la cuenta necesita una tarjeta al día. Hay tiempo para resolverlo. La cuenta sigue activa hasta el viernes 10 de octubre de 2026 y después de esa fecha se pausa.
+
+Actualiza la tarjeta en lumenbooks.example/billing y la cuenta sigue como está.
+
+Si tienes alguna pregunta, escríbenos a billing@lumenbooks.example.
+
+Saludos,
+Equipo de facturación de Lumen Books
+
 
 ## Raw output: fresh-draft audit
 

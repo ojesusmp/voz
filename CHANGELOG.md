@@ -44,7 +44,7 @@ instinct. This release names the dials and writes the rules.
   cannot drift, and `--ui` adds the string anti-patterns.
 - **`tests/fixtures/tone-mood-brief.md`** and its key: one email in a named setting with five
   facts that must survive, and one destructive dialog plus toast as a developer key table.
-- The coverage check now counts its own assertions (267, up from 104) and also verifies the
+- The coverage check now counts its own assertions (268, up from 104) and also verifies the
   post-edit checklist numbering, that every reference is pointed at from `SKILL.md`, that the
   frontmatter satisfies the Agent Skills spec, that the Spanish in the catalog carries its accents,
   and that the claude.ai zip builds with the right shape.

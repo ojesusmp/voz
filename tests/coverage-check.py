@@ -93,6 +93,7 @@ REQUIRED = {
     'concise is not curt': r'(?i)concise is not curt',
     'corporate mood vs register': r'(?i)corporate is a mood, not the corporate register',
     'empathy never announced': r'(?i)never announced|completely understand how frustrating',
+    'empathy never invents a cause': r'(?i)empathy never invents|Never a cause you do not know',
     'register wins over dial': r"(?i)register'?s structure wins|the register wins",
     'surface to default table': r'(?i)Picking the dials when nobody says',
     'email subject is the ask': r'(?i)subject line is the news or the ask',

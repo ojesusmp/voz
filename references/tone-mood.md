@@ -34,23 +34,23 @@ Concise is not curt. It still frames causes rather than faults, and it still giv
 
 Corporate is a mood, not the Corporate register. The register is a whole document shape (board update, investor note, all-hands) with its own structure in `registers.md`. The mood is the institutional stance on its own, and it fits a two-line Slack announcement or a status page entry as well as a memo. Use it when the words come from the company rather than from a person. Do not use it when a person is owed a personal answer.
 
-Empathic is never announced. "I completely understand how frustrating this must be" is the AI tell for empathy. Show it by naming their actual situation and getting to the help fast.
+Empathic is never announced. "I completely understand how frustrating this must be" is the AI tell for empathy. Show it by naming their actual situation and getting to the help fast. And empathy never invents: "it's usually the bank" is a cause the writer does not know, and it belongs to the bank, not to the message. Acknowledge what happened and what it means for the reader; the never-invent rule holds in every mood.
 
 ## The same message, nine ways
 
 A customer's card was declined. They have until Friday to update it or the account pauses.
 
-- **Casual + empathic.** "Hey Dana, your card got declined on last night's charge. That's usually the bank flagging it, not anything on your end. Update it when you get a sec, ideally before Friday so nothing pauses."
+- **Casual + empathic.** "Hey Dana, your card got declined on last night's charge. No rush today, but update it before Friday so nothing pauses: [link]."
 - **Casual + concise.** "Hey Dana, your card was declined. Update it before Friday or the account pauses: [link]."
 - **Casual + corporate.** Rarely coherent. If the channel is casual and the voice is the company's, write neutral + corporate and say so.
-- **Neutral + empathic.** "Hi Dana, last night's payment didn't go through. That usually means the bank declined the charge, not that anything is wrong with your details. Update the card before Friday and the account stays active: [link]."
+- **Neutral + empathic.** "Hi Dana, last night's payment didn't go through, so the account needs a new card on file. There is time to fix it. Update the card before Friday 10 October and the account stays active: [link]."
 - **Neutral + concise.** "Hi Dana, your payment on 6 October was declined. Update your card by Friday 10 October to keep the account active: [link]."
 - **Neutral + corporate.** "Payment for account 4471 was declined on 6 October. The account remains active until Friday 10 October. Updating the card before then keeps service uninterrupted: [link]."
-- **Professional + empathic.** "Hello Dana, the payment for your account was declined on 6 October. This is usually a bank-side check rather than an error in your details. Updating the card before Friday 10 October keeps the account active, and I am glad to help if the bank needs anything from us."
+- **Professional + empathic.** "Hello Dana, the payment for your account was declined on 6 October. Your account is unaffected until Friday 10 October, and updating the card before then keeps it active. If the bank needs anything from us, I am glad to help."
 - **Professional + concise.** "Hello Dana, the payment on 6 October was declined. Please update the card by Friday 10 October to keep the account active: [link]."
 - **Professional + corporate.** "Dear Dana Whitfield, the payment for account 4471 was declined on 6 October 2026. Service continues until Friday 10 October 2026. To avoid interruption, update the payment method before that date. Our billing team can be reached at billing@example.com."
 
-What stays the same in all nine: the date, the deadline, the consequence, the link or contact, and the absence of blame. Only the distance and the lead change.
+What stays the same in all nine: the date, the deadline, the consequence, the link or contact, the absence of blame, and the absence of any cause the writer does not know. Only the distance and the lead change.
 
 ## Picking the dials when nobody says
 
@@ -111,7 +111,7 @@ The Spanish `voz` writes is the Spanish of Puerto Rico. The variety matters more
 **The same message, three ways.** The declined-card message from above, in Puerto Rican Spanish.
 
 - Casual + concise: "Hola Dana, tu tarjeta fue rechazada. Actualízala antes del viernes para que la cuenta no se suspenda: [enlace]."
-- Neutral + empathic: "Hola Dana, el pago de anoche no se procesó. Casi siempre es que el banco rechazó el cargo, no un problema con tus datos. Actualiza la tarjeta antes del viernes 10 de octubre y la cuenta sigue activa: [enlace]."
+- Neutral + empathic: "Hola Dana, el pago de anoche no se procesó, así que la cuenta necesita una tarjeta nueva. Hay tiempo para resolverlo. Actualiza la tarjeta antes del viernes 10 de octubre y la cuenta sigue activa: [enlace]."
 - Professional + corporate: "Buenos días, Dana Whitfield: El pago de la cuenta 4471 fue rechazado el 6 de octubre de 2026. El servicio continúa activo hasta el viernes 10 de octubre de 2026. Para evitar una interrupción, actualice el método de pago antes de esa fecha. Puede comunicarse con el equipo de facturación en billing@example.com."
 
 Mood translates directly. Concise Spanish still runs a little longer than concise English; tangle is the problem, not length.

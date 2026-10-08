@@ -110,7 +110,7 @@ Register is the job the text does. Two further dials fit it to the reader. Set t
 - **Professional.** Full forms where they read better, full name or title until the reader drops it, no jokes, no exclamation marks, "you" handled with care. Clients, executives, outside partners, anything that could be forwarded. Professional is not Latinate: "use" still beats "utilize".
 
 **Mood** is stance, or what the writer leads with.
-- **Empathic** (default). One clause that meets the reader where they are, then the help. Never announced ("I completely understand how frustrating" is the tell); shown by naming their situation.
+- **Empathic** (default). One clause that meets the reader where they are, then the help. Never announced ("I completely understand how frustrating" is the tell); shown by naming their situation. Never a cause you do not know: a declined card gets "the payment didn't go through", not "it's usually the bank".
 - **Concise.** The shortest useful version. Answer or ask first, no greeting ceremony, no acknowledgment unless the reader lost something, one ask, next step stated. Concise is not curt: still blame-free.
 - **Corporate.** The organisation speaking: "we", measured, every claim anchored to a date, a number, or an owner, no personal voice. A mood, not the Corporate register: it fits a two-line announcement as well as a memo.
 
